@@ -65,11 +65,11 @@ body {
 }
 
 .link-light {
-	color: var(--grayish-blue);
+	color: var(--grayish-blue) !important;
 }
 
 .link-light:hover {
-	text-decoration: underline;
+	text-decoration: underline !important;
 }
 
 /* Header */
