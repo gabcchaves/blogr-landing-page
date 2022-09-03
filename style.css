@@ -124,11 +124,25 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	margin: 0 2%;
+	padding-right: 5%;
 }
 
 #main-header .navbar .dropdown, .dropdown-content {
 	display: flex;
 	flex-direction: column;
+}
+
+.dropdown-btn::before {
+	content: "" !important;
+	filter: invert(1) !important;
+}
+
+.dropdown-btn {
+	background-image: url("images/icon-arrow-dark.svg") !important;
+	background-repeat: no-repeat !important;
+	background-position: right !important;
+	width: 100% !important;
+	padding-right: 25% !important;
 }
 
 .dropdown-content {
