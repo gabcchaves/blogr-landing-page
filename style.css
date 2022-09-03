@@ -69,6 +69,7 @@ body {
 }
 
 .link-light:hover {
+	color: var(--white) !important;
 	text-decoration: underline !important;
 }
 
