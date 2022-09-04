@@ -20,6 +20,8 @@ img {
 	display: block;
 }
 
+a { text-decoration: none; }
+
 /* COLORS */
 :root {
 	/* Primary */
@@ -32,10 +34,10 @@ img {
 	--very-dark-grayish-blue: hsl(207, 13%, 34%);
 	--very-dark-black-blue: hsl(240, 10%, 16%);
 	/* Gradient colors */
-	--very-light-red: hsl(13, 100%, 72%);
-	--light-red: hsl(353, 100%, 62%);
-	--very-dark-gray-blue: hsl(237, 17%, 21%);
-	--very-dark-desaturated-blue: hsl(237, 23%, 32%);
+	--grad-very-light-red: hsl(13, 100%, 72%);
+	--grad-light-red: hsl(353, 100%, 62%);
+	--grad-very-dark-gray-blue: hsl(237, 17%, 21%);
+	--grad-very-dark-desaturated-blue: hsl(237, 23%, 32%);
 }
 
 /* GENERAL SETTINGS */
@@ -49,6 +51,51 @@ body {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
+}
+
+.link-light {
+	color: var(--grayish-blue);
+}
+
+.link-light:hover {
+	color: var(--white);
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.btn-light {
+	border-radius: 30px;
+	background-color: var(--white);
+	color: var(--light-red);
+	padding: 5% 15%;
+}
+
+.btn-light:hover {
+	background-color: var(--very-light-red);
+	color: var(--white);
+}
+
+.btn-outline-light {
+	border: 1px solid var(--white);
+	border-radius: 30px;
+	color: var(--white);
+}
+
+.btn-outline-light:hover {
+	background-color: var(--very-light-red);
+	color: var(--white);
+}
+
+.dropdown {
+	position: relative;
+	padding: 0 2%;
+}
+
+.dropdown-content {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
 }
 
 /* Header */
