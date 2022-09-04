@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
 
 /* RESETTINGS */
-* {
-	transition: 0.2s;
-	font-size: 16px;
-}
-
 html, body {
 	margin: 0;
 	padding: 0;
+}
+
+* {
+	font-size: 16px;
+	transition: 0.2s;
 	box-sizing: border-box;
 }
 
-a {
-	text-decoration: none;
+button {
+	all: unset;
+}
+
+img {
+	display: block;
 }
 
 /* COLORS */
@@ -21,163 +25,58 @@ a {
 	/* Primary */
 	--light-red: hsl(356, 100%, 66%);
 	--very-light-red: hsl(355, 100%, 74%);
-	--very-dark-blue (headings): hsl(208, 49%, 24%);
+	--very-dark-blue: hsl(208, 49%, 24%);
 	/* Neutral */
 	--white: hsl(0, 0%, 100%);
 	--grayish-blue: hsl(240, 2%, 79%);
 	--very-dark-grayish-blue: hsl(207, 13%, 34%);
 	--very-dark-black-blue: hsl(240, 10%, 16%);
-	/* Gradients */
-	--grad-very-light-red: hsl(13, 100%, 72%);
-	--grad-light-red: hsl(353, 100%, 62%);
-	--grad-very-dark-gray-blue: hsl(237, 17%, 21%);
-	--grad-very-dark-desaturated-blue: hsl(237, 23%, 32%);
+	/* Gradient colors */
+	--very-light-red: hsl(13, 100%, 72%);
+	--light-red: hsl(353, 100%, 62%);
+	--very-dark-gray-blue: hsl(237, 17%, 21%);
+	--very-dark-desaturated-blue: hsl(237, 23%, 32%);
 }
 
 /* GENERAL SETTINGS */
+html {
+	width: 100vw;
+	height: 100vh;
+}
+
 body {
 	width: 100%;
 	height: 100%;
-}
-
-.btn-light {
-	background-color: var(--white) !important;
-	color: var(--light-red) !important;
-}
-
-.btn-light:hover {
-	background-color: var(--very-light-red) !important;
-	color: var(--white) !important;
-}
-
-.btn-outline {
-	border: 1px solid var(--white) !important;
-	color: var(--white) !important;
-}
-
-.btn-outline:hover {
-	background-color: var(--white) !important;
-	color: var(--very-light-red) !important;
-}
-
-.btn-light, .btn-outline {
-	border-radius: 30px !important;
-}
-
-.link-light {
-	color: var(--grayish-blue) !important;
-}
-
-.link-light:hover {
-	color: var(--white) !important;
-	text-decoration: underline !important;
+	display: flex;
+	flex-direction: column;
 }
 
 /* Header */
 #main-header {
-	display: flex;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	width: 100%;
-	height: 20%;
-	padding: 0 10%;
-	box-sizing: border-box;
-	font-family: 'Ubuntu';
-	font-weight: 600;
-}
-
-#main-header .logo-container {
+	height: 10%;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	align-items: center;
+	padding: 0 10%;
 }
 
 #main-header .navbar {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	flex: 1;
-	color: var(--white);
-}
-
-#main-header .navbar button {
-	all: unset;
-}
-
-#main-header .navbar button:hover {
-	cursor: pointer;
-}
-
-#main-header .navbar > div {
-	flex: 1;
-	display: flex;
-	padding: 0 3%;
-}
-
-#main-header .navbar .dropdown {
 	height: 100%;
-	position: relative;
-	overflow: visible;
+}
+
+#main-header .navbar:first-of-type {
+	flex: 1;
+}
+
+#main-header .navbar:last-of-type {
+	width: 20%;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin: 0 2%;
-	padding-right: 5%;
-}
-
-#main-header .navbar .dropdown, .dropdown-content {
-	display: flex;
-	flex-direction: column;
-}
-
-.dropdown-btn::before {
-	content: "" !important;
-	filter: invert(1) !important;
-}
-
-.dropdown-btn {
-	background-image: url("images/icon-arrow-dark.svg") !important;
-	background-repeat: no-repeat !important;
-	background-position: right !important;
-	width: 100% !important;
-	padding-right: 25% !important;
-}
-
-.dropdown-content {
-	position: absolute;
-	top: 100%;
-}
-
-#main-header .navbar .log-options {
-	width: 30%;
-	display: flex;
-	justify-content: flex-end;
-}
-
-#main-header .navbar .log-options a {
-	border-radius: 30px;
-	padding: 5% 15%;
-	color: var(--white);
-}
-
-
-/* Intro */
-#intro {
-	background-image:
-		url("images/bg-pattern-intro-desktop.svg"),
-		linear-gradient(to right, var(--grad-very-light-red), var(--grad-light-red));
-	height: 70vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-family: 'Overpass';
-	color: var(--white);
-}
-
-#intro h1 {
-	font-size: 3rem;
-	margin-bottom: 0;
+	justify-content: space-between;
 }
