@@ -302,3 +302,47 @@ h3 {
 	grid-column: 2;
 	padding-right: 20%;
 }
+
+/* Main footer */
+#main-footer {
+	height: 50vh;
+	background-color: var(--very-dark-black-blue);
+	border-top-right-radius: 90px;
+	color: var(--grayish-blue);
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 20% 1fr;
+	width: 100%;
+}
+
+#main-footer > div {
+	grid-row: 1;
+	padding: 21% 0;
+}
+
+#main-footer > div:first-child {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+#main-footer > div:last-child {
+	display: flex;
+	flex: 1;
+	padding: 5% 10%;
+}
+
+#main-footer > div:not(div:first-child) nav {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+#main-footer > div:not(div:first-child) nav strong {
+	margin-bottom: 5%;
+	color: var(--white);
+}
+
+#main-footer > div:not(div:first-child) nav a {
+	margin: 1%;
+}
