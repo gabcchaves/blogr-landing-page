@@ -11,6 +11,7 @@ html, body {
 	transition: 0.2s;
 	box-sizing: border-box;
 	line-height: 1.5;
+	box-sizing: border-box;
 }
 
 button {
@@ -373,4 +374,59 @@ body {
 }
 #main-footer div:last-child nav a:hover {
 	text-decoration: underline;
+}
+
+/* MOBILE SETTINGS */
+@media screen and (max-width: 1080px) {
+	section {
+		all: unset;
+		display: flex;
+		flex-direction: column;
+		width: 100vw;
+	}
+
+	h1 {
+		font-size: 2rem !important;
+	}
+
+	h2 {
+		font-size: 1.5rem !important;
+	}
+
+	/* Header */
+	#main-header .navbar * {
+		display: none;
+	}
+
+	#menu-btn {
+		display: block;
+	}
+
+	/* Intro */
+	#intro {
+		background-image:
+			url("images/bg-pattern-intro-mobile.svg"),
+			linear-gradient(to right, var(--grad-very-light-red), var(--grad-light-red));
+		background-size: 400%, 100%;
+		background-position: 40% 40%, center;
+		text-align: center;
+		padding: 0 10%;
+	}
+
+
+	#intro > div a {
+		padding: 3% 5%;
+	}
+
+	/* Overview */
+	main {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	main picture {
+		all: unset;
+		height: 20vh;
+		background-color: blue;
+	}
 }
