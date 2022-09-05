@@ -43,7 +43,7 @@ a { text-decoration: none; }
 /* GENERAL SETTINGS */
 html {
 	width: 100vw;
-	height: 100vh;
+	max-width: 100vw;
 }
 
 body {
@@ -54,7 +54,7 @@ body {
 }
 
 .link-light {
-	color: var(--grayish-blue);
+	color: #eee;
 }
 
 .link-light:hover {
@@ -82,34 +82,80 @@ body {
 }
 
 .btn-outline-light:hover {
-	background-color: var(--very-light-red);
-	color: var(--white);
+	background-color: var(--white);
+	color: var(--very-light-red);
 }
 
 .dropdown {
 	position: relative;
 	padding: 0 2%;
+	width: 15%;
+	margin: 0 2%;
+	overflow: visible;
+}
+
+.dropdown-btn {
+	width: 100%;
+	padding-right: 1%;
+	background-image: url("images/icon-arrow-dark.svg");
+	background-repeat: no-repeat;
+	background-position: right;
+	color: var(--very-light-red);
+	filter: brightness(1.8);
+}
+
+.dropdown-btn:hover {
+	filter: brightness(2);
 }
 
 .dropdown-content {
 	position: absolute;
-	top: 100%;
+	top: 150%;
 	left: 0;
 	right: 0;
+	background-color: var(--white);
+	padding: 20%;
+	border-radius: 5px;
+	display: none;
+	flex-direction: column;
+	width: 120%;
+}
+
+.dropdown-content a {
+	font-weight: 400;
+}
+
+.dropdown-content a:hover {
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.link-dark {
+	color: var(--very-dark-grayish-blue) !important;
+}
+
+.link-dark:hover {
+	text-decoration: underline;
 }
 
 /* Header */
 #main-header {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	width: 100%;
-	height: 10%;
+	height: 20%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	padding: 0 10%;
+	font-family: 'Ubuntu';
+	font-weight: 600;
+}
+
+#main-header .logo {
+	padding-right: 5%;
 }
 
 #main-header .navbar {
@@ -126,4 +172,41 @@ body {
 	width: 20%;
 	display: flex;
 	justify-content: space-between;
+}
+
+/* Intro */
+#intro {
+	background-image:
+		url("images/bg-pattern-intro-desktop.svg"),
+		linear-gradient(to right, var(--grad-very-light-red), var(--grad-light-red));
+	background-repeat: no-repeat;
+	background-position: 40% center, center;
+	background-size: 150%;
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-bottom-left-radius: 90px;
+	color: var(--white);
+}
+
+#intro h1 {
+	font-size: 3rem;
+	margin: 0;
+}
+
+#intro p {
+	margin-bottom: 5%;
+}
+
+#intro div {
+	width: 100%;
+	height: 10%;
+	text-align: center;
+}
+
+#intro a {
+	padding: 1% 2%;
+	margin: 0 0.5%;
 }
