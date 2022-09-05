@@ -56,6 +56,14 @@ body {
 	color: var(--very-dark-grayish-blue);
 }
 
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
 .link-light {
 	color: #eee;
 }
@@ -247,10 +255,25 @@ body {
 #overview .topic {
 	grid-column: 1;
 	padding: 0 20%;
-	margin: 5% 0;
+	margin: 3% 0;
 }
 
 /* Features */
-.section-intro {
-	background-image: linear-gradient(to right, var(--grad-very-dark-gray-blue), var(--grad-very-dark-desaturated-blue));
+#features .section-intro {
+	background-image:
+		url("images/bg-pattern-circles.svg"),
+		linear-gradient(to right, var(--grad-very-dark-gray-blue), var(--grad-very-dark-desaturated-blue));
+	background-repeat: no-repeat;
+	background-size: 70%, 100%;
+	background-position: -50% 80%, center;
+	display: flex;
+	align-items: center;
+	color: var(--white);
+	overflow: visible;
+	height: 50vh;
+	border-bottom-left-radius: 90px;
+}
+
+#features .section-intro div:last-child {
+	padding: 10%;
 }
