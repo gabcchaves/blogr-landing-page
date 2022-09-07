@@ -221,3 +221,62 @@ main a:last-of-type:hover {
 	background-color: var(--white);
 	color: var(--light-red);
 }
+
+/* Topics */
+body {
+	text-align: center;
+	font-family: 'Overpass';
+}
+
+h2, h3 {
+	color: var(--very-dark-blue);
+}
+
+h2 {
+	font-size: 1.6rem;
+}
+
+h3 {
+	font-size: 1.2rem;
+}
+
+section {
+	padding: 5% 7%;
+}
+
+section p {
+	color: var(--very-dark-grayish-blue);
+	font-size: 0.9rem;
+}
+
+.card {
+	background-image:
+		url("images/bg-pattern-circles.svg"),
+		linear-gradient(to bottom, var(--grad-very-dark-gray-blue), var(--grad-very-dark-desaturated-blue));
+	background-repeat: no-repeat;
+	background-size: 150%;
+	background-position: center 800%, center;
+	border-top-right-radius: 90px;
+	border-bottom-left-radius: 90px;
+	position: relative;
+	margin-top: 50%;
+	margin-bottom: 10%;
+	padding-top: 50%;
+	padding-bottom: 20%;
+}
+
+.card * {
+	color: var(--white);
+}
+
+.card picture {
+	position: absolute;
+	top: -35%;
+	left: 0;
+	width: 100%;
+}
+
+.card h2 {
+	font-size: 2.3rem;
+	margin: 10% 0 0 0;
+}
