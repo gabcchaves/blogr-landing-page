@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* RESETTINGS */
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100vw;
+}
+
+* {
+	font-size: 16px;
+	box-sizing: border-box;
+	transition: 0.2s;
+	line-height: 1.5;
+}
+
+button {
+	all: unset;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* COLORS */
+:root {
+	/* Primary */
+	--light-red: hsl(356, 100%, 66%);
+	--very-light-red: hsl(355, 100%, 74%);
+	--very-dark-blue: hsl(208, 49%, 24%);
+	/* Neutral */
+	--white: hsl(0, 0%, 100%);
+	--grayish-blue: hsl(240, 2%, 79%);
+	--very-dark-grayish-blue: hsl(207, 13%, 34%);
+	--very-dark-black-blue: hsl(240, 10%, 16%);
+	/* Gradient */
+	--grad-very-light-red: hsl(13, 100%, 72%);
+	--grad-light-red: hsl(353, 100%, 62%);
+	--grad-very-dark-gray-blue: hsl(237, 17%, 21%);
+	--grad-very-dark-desaturated-blue: hsl(237, 23%, 32%);
+}
+
+/* MOBILE SETTINGS */
+/* Header */
+#main-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10%;
+}	
+
+#main-header { font-family: 'Ubuntu'; }
+
+#main-header nav {
+	position: absolute;
+	top: 90%;
+	left: 5%;
+	right: 5%;
+	height: auto;
+	display: none;
+	flex-direction: column;
+	text-align: center;
+	padding: 7%;
+	background-color: var(--white);
+	border-radius: 5px;
+	box-shadow: 0 1px 30px -5px var(--very-dark-grayish-blue);
+}
+
+#main-header nav * { color: var(--very-dark-black-blue); }
+
+#main-header nav > div {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.dropdown-btn {
+	margin: 5% 0;
+	align-self: center;
+	padding: 0 7%;
+	background-image: url("images/icon-arrow-dark.svg");
+	background-repeat: no-repeat;
+	background-position: right;
+	font-size: 1.3rem;
+}
+
+.dropdown-btn:hover, .dropdown a:hover {
+	text-decoration: underline;
+	color: var(--very-dark-black-blue) !important;
+}
+
+.dropdown-content {
+	display: none;
+	flex-direction: column;
+	height: 100%;
+	background-color: #ddd;
+	border-radius: 5px;
+}
+
+.dropdown-content a {
+	color: var(--very-dark-grayish-blue) !important;
+	margin: 2% 0;
+	font-size: 1.1rem;
+}
+
+#main-header nav > div:last-of-type {
+	padding: 5% 0;
+	margin-top: 5%;
+	border-top: 1px solid lightgray;
+}
+
+#main-header nav > div:last-of-type a:first-of-type,
+#main-header nav > div:last-of-type a:last-of-type {
+	padding: 4% 10%;
+	align-self: center;
+	border-radius: 30px;
+	font-size: 1.3rem;
+}
+
+#main-header nav > div:last-of-type a:first-of-type {
+	font-weight: 500;
+}
+
+#main-header nav > div:last-of-type a:last-of-type {
+	background-image: linear-gradient(to right, var(--grad-very-light-red), var(--grad-light-red));
+	color: var(--white);
+	font-weight: 700;
+}
+
+#main-header nav > div:last-of-type a:first-of-type:hover {
+	color: var(--light-red);
+}
+
+#main-header nav > div:last-of-type a:last-of-type:hover {
+	background-image: none;
+	background-color: var(--white);
+	color: var(--light-red);
+}
+
+/* Intro */
+main {
+	display: grid;
+	grid-template-rows: 50% 20% 30%;
+	grid-template-columns: 1fr 1fr;
+	gap: 0 3vh;
+	background-image:
+		url("images/bg-pattern-intro-mobile.svg"),
+		linear-gradient(to bottom, var(--grad-very-light-red), var(--grad-light-red));
+	background-size: 400%, 100%;
+	background-repeat: no-repeat;
+	background-position: 35% 40%, center;
+	height: 90vh;
+	border-bottom-left-radius: 90px;
+	color: var(--white);
+	text-align: center;
+}
+
+main * { font-family: 'Overpass'; }
+
+main h1 {
+	grid-row: 1;
+	grid-column: 1 / 3;
+	justify-self: center;
+	align-self: end;
+	font-size: 2.5rem;
+	margin: 0 0 5% 0;
+}
+
+main p {
+	grid-row: 2;
+	grid-column: 1 / 3;
+	font-size: 1.3rem;
+	margin: 0;
+}
+
+main a:first-of-type {
+	grid-row: 3;
+	grid-column: 1;
+	justify-self: end;
+	align-self: start;
+	border: 1px solid transparent;
+	border-radius: 30px;
+	background-color: var(--white);
+	color: var(--light-red);
+	padding: 7% 10%;
+	font-weight: 600;
+}
+
+main a:last-of-type {
+	grid-row: 3;
+	grid-column: 2;
+	justify-self: start;
+	align-self: start;
+	border: 1px solid var(--white);
+	border-radius: 30px;
+	background-color: transparent;
+	color: var(--white);
+	padding: 7% 10%;
+	font-weight: 600;
+}
+
+main a:first-of-type:hover {
+	background-color: var(--very-light-red);
+	color: var(--white);
+}
+
+main a:last-of-type:hover {
+	background-color: var(--white);
+	color: var(--light-red);
+}
