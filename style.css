@@ -423,7 +423,11 @@ body > section { padding: 0; }
 	}
 
 	/* Topics */
-	body > section { text-align: left; overflow: hidden; }
+	body > section {
+		text-align: left;
+		overflow: hidden;
+		margin-bottom: -40%;
+	}
 	body > section:first-of-type {
 		display: grid;
 		grid-template-rows: 1fr 1fr 1fr;
@@ -434,6 +438,7 @@ body > section { padding: 0; }
 		grid-row: 1;
 		grid-column: 1 / 3;
 		margin-top: 5%;
+		text-align: center;
 	}
 
 	body > section:first-of-type picture {
@@ -515,6 +520,7 @@ body > section { padding: 0; }
 		justify-content: stretch;
 		background-color: var(--very-dark-black-blue);
 		border-top-right-radius: 90px;
+		margin-top: 15%;
 	}
 
 	#main-footer > div {
