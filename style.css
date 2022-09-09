@@ -122,6 +122,11 @@ a {
 	border-top: 1px solid lightgray;
 }
 
+#main-header nav > div:last-of-type div {
+	display: flex;
+	flex-direction: column;
+}
+
 #main-header nav > div:last-of-type a:first-of-type,
 #main-header nav > div:last-of-type a:last-of-type {
 	padding: 4% 10%;
@@ -317,4 +322,210 @@ section p {
 #main-footer > div > strong {
 	color: var(--white);
 	margin-bottom: 4%;
+}
+
+body > section { padding: 0; }
+
+/* Larger screens settings */
+@media screen and (min-width: 1081px) {
+	/* Header */
+	#menu-btn { display: none; }
+
+	#main-header {
+		top: 0;
+		height: 20%;
+		align-items: center;
+	}
+
+	#main-header nav {
+		all: unset;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		height: 100%;
+		flex: 1;
+	}
+
+	#main-header nav > div {
+		height: 100%;
+	}
+
+	#main-header nav > div:first-of-type {
+		padding-left: 5%;
+	}
+
+	#main-header nav > div:last-of-type {
+		flex-direction: row;
+		flex: 1;
+		justify-content: flex-end;
+		align-items: center;
+		border: none;
+		margin: 0;
+	}
+
+	#main-header nav > div:last-of-type > div {
+		display: flex;
+		flex-direction: row;
+		width: 40%;
+	}
+
+	.dropdown {
+		justify-content: center;
+		padding: 0 2%;
+	}
+
+	.dropdown-btn {
+		padding-right: 20%;
+	}
+
+	.dropdown-btn,
+	#main-header nav > div:last-of-type > div a:first-of-type {
+		color: var(--very-light-red) !important;
+		filter: brightness(1.7) !important;
+	}
+
+	.dropdown-btn:hover,
+	#main-header nav > div:last-of-type > div a:first-of-type:hover {
+		color: var(--very-light-red) !important;
+		filter: brightness(2) !important;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	#main-header nav > div:last-of-type > div a:last-of-type {
+		background-image: none;
+		background-color: var(--white);
+		color: var(--light-red);
+	}
+
+	#main-header nav > div:last-of-type > div a:last-of-type:hover {
+		background-color: var(--very-light-red);
+		color: var(--white);
+	}
+
+	/* Intro */
+	main {
+		background-image:
+			url("images/bg-pattern-intro-desktop.svg"),
+			linear-gradient(to right, var(--grad-very-light-red), var(--grad-light-red));
+		background-size: 200%, 100%;
+		background-repeat: no-repeat;
+		background-position: 35% 50%, center;
+	}
+
+	main h1 {
+		margin: 0;
+		font-size: 3rem;
+	}
+
+	main a {
+		padding: 2% 5% !important;
+	}
+
+	/* Topics */
+	body > section { text-align: left; overflow: hidden; }
+	body > section:first-of-type {
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	body > section:first-of-type h2 {
+		grid-row: 1;
+		grid-column: 1 / 3;
+		margin-top: 5%;
+	}
+
+	body > section:first-of-type picture {
+		grid-row: 1 / 5;
+		grid-column: 2;
+	}
+
+	body > section:first-of-type picture img {
+		margin-left: 20%;
+		margin-top: 10%;
+	}
+
+	body > section:first-of-type .topic {
+		padding: 0 0 0 23%;
+		margin: 0;
+		text-align: left;
+	}
+
+	body > section:last-of-type {
+		display: grid;
+		grid-template-rows: 1fr 30% 1fr;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	body > section:last-of-type > .card {
+		grid-row: 1;
+		grid-column: 1 / 3;
+		display: flex;
+		align-items: center;
+		height: 50vh;
+		padding: 0;
+		background-image:
+			url("images/bg-pattern-circles.svg"),
+			linear-gradient(to right, var(--grad-very-dark-gray-blue), var(--grad-very-dark-desaturated-blue));
+		background-size: 70%, 100%;
+		background-position: -40% 90%, center;
+	}
+
+	body > section:last-of-type .card picture {
+		position: static;
+		padding-left: 10%;
+	}
+
+	body > section:last-of-type .card picture img {
+		width: 110%;
+	}
+
+	body > section:last-of-type .card > div {
+		padding-right: 10%;
+		margin-left: 10%;
+	}
+
+	body > section:last-of-type > picture {
+		grid-row: 2 / 4;
+		grid-column: 1;
+		padding: 0;
+		margin: 0;
+	}
+
+	body > section:last-of-type > picture img {
+		margin-left: -20%;
+		width: 120%;
+	}
+
+	body > section:last-of-type > .topic:last-of-type {
+		grid-row: 3;
+	}
+
+	body > section:last-of-type > .topic:nth-of-type(2),
+	body > section:last-of-type > .topic:nth-of-type(3) {
+		padding-right: 30%;
+	}
+
+	/* Footer */
+	#main-footer {
+		all: unset;
+		display: flex;
+		flex-direction: row;
+		justify-content: stretch;
+		background-color: var(--very-dark-black-blue);
+		border-top-right-radius: 90px;
+	}
+
+	#main-footer > div {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 20%;
+	}
+
+	#main-footer > div:first-child {
+		align-self: flex-start;
+		height: 100% !important;
+	}
 }
